@@ -33,28 +33,28 @@ describe("PatternGenerator", () => {
   });
 
   describe.skip("Part 3: Possibilities", () => {
-    describe(".total_available", () => {
+    describe(".totalAvailable", () => {
       it("Given a specific pattern, determine how many total numbers are in the set", () => {
         let pattern = ".#.";
-        expect(pg.total_available(pattern)).to.equal(6760);
+        expect(pg.totalAvailable(pattern)).to.equal(6760);
 
         pattern = "@.#.";
-        expect(pg.total_available(pattern)).to.equal(243360);
+        expect(pg.totalAvailable(pattern)).to.equal(243360);
 
         pattern = "";
-        expect(pg.total_available(pattern)).to.equal(0);
+        expect(pg.totalAvailable(pattern)).to.equal(0);
       });
     });
   });
 
   describe.skip("Part 4: Deduction", () => {
-    describe(".find_pattern_for", () => {
+    describe(".findPatternFor", () => {
       it("Given a sample of three serial numbers, output a pattern that could generate them. Prefer . and # over @ if they fit the sample serial numbers", () => {
         const inputs = ["0A1B", "5C2Z", "9R9B"];
-        expect(pg.find_pattern_for(inputs)).to.equal("#.#.");
+        expect(pg.findPatternFor(inputs)).to.equal("#.#.");
 
         const inputs2 = ["0A1B", "5C2Z", "AR9B"];
-        expect(pg.find_pattern_for(inputs2)).to.equal("@.#.");
+        expect(pg.findPatternFor(inputs2)).to.equal("@.#.");
       });
     });
   });
